@@ -16,7 +16,7 @@ public class Combate {
             }
 
             // Ataque del primero
-            Movimiento movAtacante = atacantes.getMovimientos().get(0); // ejemplo: primer movimiento
+            Movimientos movAtacante = atacantes.getMovimientos().get(0); // ejemplo: primer movimiento
             atacantes.usarMovimiento(defensores, movAtacante);
 
             if(defensores.getVida() <= 0) {
@@ -25,7 +25,7 @@ public class Combate {
             }
 
             // Ataque del segundo
-            Movimiento movDefensor = defensores.getMovimientos().get(0); // ejemplo: primer movimiento
+            Movimientos movDefensor = defensores.getMovimientos().get(0); // ejemplo: primer movimiento
             defensores.usarMovimiento(atacantes, movDefensor);
 
             if(atacantes.getVida() <= 0) {

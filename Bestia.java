@@ -21,7 +21,7 @@ public class Bestia {
 	private int Experiencia;
 	private int Mana;
 	private int costeMana;
-	private List<Movimiento> movimientos;
+	private List<Movimientos> movimientos;
 	private Estado estadoActual;
 	private Integer evolucionaA;
 	private Integer NvEvo;
@@ -57,10 +57,10 @@ public class Bestia {
 	}
 	
 	public Bestia (int ID, String Nombre, Tipo Tipo1, Tipo Tipo2, Especie Especie, Rango Rango,
-            int Vida, int VidaMaxima, int Ataque, int AtaqueEspecial, int Defensa, int DefensaEspecial,
-            int Velocidad, int Evasión, int StatsTotales, int Nivel, int Experiencia, int Mana, int costeMana,
-            List<Movimiento> movimientos, Estado estadoActual, Integer evolucionaA,
-            Integer NvEvo, Habilidad Habilidad) {
+				   int Vida, int VidaMaxima, int Ataque, int AtaqueEspecial, int Defensa, int DefensaEspecial,
+				   int Velocidad, int Evasión, int StatsTotales, int Nivel, int Experiencia, int Mana, int costeMana,
+				   List<Movimientos> movimientos, Estado estadoActual, Integer evolucionaA,
+				   Integer NvEvo, Habilidad Habilidad) {
 		this.ID=ID;
 		this.Nombre=Nombre;
 		this.Tipo1=Tipo1;
@@ -242,11 +242,11 @@ public class Bestia {
 	    return this.costeMana;
 	}
 
-	public void setMovimientos(List<Movimiento> movimientos) {
+	public void setMovimientos(List<Movimientos> movimientos) {
 	    this.movimientos = movimientos;
 	}
 
-	public List<Movimiento> getMovimientos() {
+	public List<Movimientos> getMovimientos() {
 	    return this.movimientos;
 	}
 
@@ -379,7 +379,7 @@ public class Bestia {
 	    }
 	}
 	
-	public void aprenderMovimiento(Movimiento mov) {
+	public void aprenderMovimiento(Movimientos mov) {
 	    if(!movimientos.contains(mov)) {
 	        movimientos.add(mov);
 	        System.out.println(this.Nombre + " aprendió " + mov.getNombre() + "!");
@@ -388,7 +388,7 @@ public class Bestia {
 	    }
 	}
 	
-	public void olvidarMovimiento(Movimiento mov) {
+	public void olvidarMovimiento(Movimientos mov) {
 	    if(movimientos.contains(mov)) {
 	        movimientos.remove(mov);
 	        System.out.println(this.Nombre + " olvidó " + mov.getNombre() + ".");
@@ -397,7 +397,7 @@ public class Bestia {
 	    }
 	}
 	
-	public void usarMovimiento(Bestia objetivo, Movimiento mov) {
+	public void usarMovimiento(Bestia objetivo, Movimientos mov) {
 	    if(!movimientos.contains(mov)) {
 	        System.out.println(this.Nombre + " no conoce " + mov.getNombre() + ".");
 	        return;

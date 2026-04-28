@@ -1,13 +1,13 @@
 package MiJuego;
 
-public class Movimiento {
+public class Movimientos {
 	private String nombre;
     private Tipo tipo;
     private int poder;
     private int precision;
     private int costeMana;
 
-    public Movimiento(String nombre, Tipo tipo, int poder, int precision, int costeMana) {
+    public Movimientos(String nombre, Tipo tipo, int poder, int precision, int costeMana) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.poder = poder;
