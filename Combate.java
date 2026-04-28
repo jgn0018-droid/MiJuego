@@ -6,27 +6,27 @@ public class Combate {
 
         while(b1.getVida() > 0 && b2.getVida() > 0) {
             // Determinar quién ataca primero según velocidad
-            Bestia atacantes, defensor;
+            Bestia atacantes, defensores;
             if(b1.getVelocidad() >= b2.getVelocidad()) {
                 atacantes = b1;
-                defensor = b2;
+                defensores = b2;
             } else {
                 atacantes = b2;
-                defensor = b1;
+                defensores = b1;
             }
 
             // Ataque del primero
             Movimiento movAtacante = atacantes.getMovimientos().get(0); // ejemplo: primer movimiento
-            atacantes.usarMovimiento(defensor, movAtacante);
+            atacantes.usarMovimiento(defensores, movAtacante);
 
-            if(defensor.getVida() <= 0) {
-                System.out.println(defensor.getNombre() + " ha sido derrotado!");
+            if(defensores.getVida() <= 0) {
+                System.out.println(defensores.getNombre() + " ha sido derrotado!");
                 break;
             }
 
             // Ataque del segundo
-            Movimiento movDefensor = defensor.getMovimientos().get(0); // ejemplo: primer movimiento
-            defensor.usarMovimiento(atacantes, movDefensor);
+            Movimiento movDefensor = defensores.getMovimientos().get(0); // ejemplo: primer movimiento
+            defensores.usarMovimiento(atacantes, movDefensor);
 
             if(atacantes.getVida() <= 0) {
                 System.out.println(atacantes.getNombre() + " ha sido derrotado!");
