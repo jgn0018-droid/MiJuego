@@ -1,12 +1,12 @@
 package MiJuego;
 
 public class Combate {
-	public static void iniciarCombate(Bestia b1, Bestia b2) {
+	public static void iniciarCombate(Bestias b1, Bestias b2) {
         System.out.println("¡Comienza el combate entre " + b1.getNombre() + " y " + b2.getNombre() + "!");
 
         while(b1.getVida() > 0 && b2.getVida() > 0) {
             // Determinar quién ataca primero según velocidad
-            Bestia atacantes, defensores;
+            Bestias atacantes, defensores;
             if(b1.getVelocidad() >= b2.getVelocidad()) {
                 atacantes = b1;
                 defensores = b2;

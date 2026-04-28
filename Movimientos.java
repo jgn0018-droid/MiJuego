@@ -56,7 +56,7 @@ public class Movimientos {
     }
 
     // Método ejemplo para calcular daño
-    public int calcularDaño(Bestia atacante, Bestia objetivo) {
+    public int calcularDaño(Bestias atacante, Bestias objetivo) {
         // fórmula simple: poder + diferencia de ataque/defensa
         int daño = this.poder + (atacante.getAtaque() - objetivo.getDefensa());
         if(daño < 0) daño = 0;

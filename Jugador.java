@@ -1,11 +1,10 @@
 package MiJuego;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Jugador {
 	private String Nombre;
-	private List<Bestia> Equipo;
+	private List<Bestias> Equipo;
 	private List<Objeto> Inventario;
 	private int Monedas;
 	
@@ -16,7 +15,7 @@ public class Jugador {
 		this.Monedas=0;
 	}
 	
-	public Jugador (String Nombre, List<Bestia> Equipo, List<Objeto> Inventario, int Monedas) {
+	public Jugador (String Nombre, List<Bestias> Equipo, List<Objeto> Inventario, int Monedas) {
 		this.Nombre=Nombre;
 		this.Equipo=Equipo;
 		this.Inventario=Inventario;
@@ -31,11 +30,11 @@ public class Jugador {
 		return this.Nombre;
 	}
 	
-	public void setEquipo (List<Bestia> Equipo) {
+	public void setEquipo (List<Bestias> Equipo) {
 		this.Equipo=Equipo;
 	}
 	
-	public List<Bestia> getEquipo() {
+	public List<Bestias> getEquipo() {
 		return this.Equipo;
 	}
 	
@@ -55,7 +54,7 @@ public class Jugador {
 		return this.Monedas;
 	}
 	
-	 public void agregarBestia(Bestia b) {
+	 public void agregarBestia(Bestias b) {
 	        if(Equipo.size() < 6) { // límite tipo Pokémon
 	            Equipo.add(b);
 	            System.out.println(b.getNombre() + " se ha unido a tu equipo!");
@@ -71,7 +70,7 @@ public class Jugador {
 	    }
 
 	    // Usar objeto (ejemplo simple)
-	    public void usarObjeto(Objeto obj, Bestia b) {
+	    public void usarObjeto(Objeto obj, Bestias b) {
 	        if(!Inventario.contains(obj)) {
 	            System.out.println("No tienes " + obj.getNombre() + " en tu inventario.");
 	            return;
@@ -98,7 +97,7 @@ public class Jugador {
 	    // Mostrar equipo
 	    public void mostrarEquipo() {
 	        System.out.println("Equipo de " + Nombre + ":");
-	        for(Bestia b : Equipo) {
+	        for(Bestias b : Equipo) {
 	            System.out.println("- " + b.getNombre() + " (Nivel " + b.getNivel() + ")");
 	        }
 	    }

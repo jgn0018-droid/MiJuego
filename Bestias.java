@@ -1,7 +1,7 @@
 package MiJuego;
 import java.util.List;
 import java.util.ArrayList;
-public class Bestia {
+public class Bestias {
 	private int ID;
 	private String Nombre;
 	private Tipo Tipo1;
@@ -28,7 +28,7 @@ public class Bestia {
 	private Habilidad Habilidad;
 
 	
-	public Bestia () {
+	public Bestias() {
 		this.ID=0;
 		this.Nombre="";
 		this.Tipo1=null;
@@ -56,7 +56,7 @@ public class Bestia {
 
 	}
 	
-	public Bestia (int ID, String Nombre, Tipo Tipo1, Tipo Tipo2, Especie Especie, Rango Rango,
+	public Bestias(int ID, String Nombre, Tipo Tipo1, Tipo Tipo2, Especie Especie, Rango Rango,
 				   int Vida, int VidaMaxima, int Ataque, int AtaqueEspecial, int Defensa, int DefensaEspecial,
 				   int Velocidad, int Evasión, int StatsTotales, int Nivel, int Experiencia, int Mana, int costeMana,
 				   List<Movimientos> movimientos, Estado estadoActual, Integer evolucionaA,
@@ -397,7 +397,7 @@ public class Bestia {
 	    }
 	}
 	
-	public void usarMovimiento(Bestia objetivo, Movimientos mov) {
+	public void usarMovimiento(Bestias objetivo, Movimientos mov) {
 	    if(!movimientos.contains(mov)) {
 	        System.out.println(this.Nombre + " no conoce " + mov.getNombre() + ".");
 	        return;
